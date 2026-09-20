@@ -7,8 +7,8 @@ main theorem** and `AbelFormalization.mainTheorem : MainTheorem`. The hypotheses
 language, parameter convention, quantifiers, and conclusions agree. The separate
 existence requirement is now supplied by `AbelFormalization.exists_isAbel`.
 
-Source: `/Users/artemchernikov/Downloads/omin.tex`, Version 29,
-7 September 2026. SHA-256:
+Source: the user-supplied `omin.tex` manuscript (not included in this
+repository), Version 29, 7 September 2026. SHA-256:
 `f71eff9a0f971a8b17ac33c956b34313625c4e986bb9f9dff269ff1b869029d2`.
 The theorem is at source lines 131–141; its standing hypotheses are at 64–68,
 and the inverse and definability conventions are at 111–129.

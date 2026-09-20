@@ -13,8 +13,9 @@ See [the existence construction](ABEL_EXISTENCE_CONSTRUCTION.md) and
 [the statement correspondence audit](MAIN_THEOREM_CORRESPONDENCE_AUDIT.md).
 
 The source is *A transexponential o-minimal structure (maybe)*, version 29,
-7 September 2026, supplied as `omin.tex`. The proposed main theorem appears at
-lines 131–141 of that source.
+7 September 2026, a user-supplied manuscript named `omin.tex` (not included
+in this repository). The proposed main theorem appears at lines 131–141
+of that source.
 
 ## What is formalized
 
