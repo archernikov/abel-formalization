@@ -1,0 +1,3 @@
+import AbelFormalization.WilkieRegularSliceLinearBridge
+
+#print axioms AbelFormalization.surjective_restricted_map_of_surjective_augmented

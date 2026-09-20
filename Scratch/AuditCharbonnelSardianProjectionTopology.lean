@@ -1,0 +1,7 @@
+import AbelFormalization.CharbonnelSardianProjectionTopology
+
+open AbelFormalization
+
+#print axioms AbelFormalization.realEuclideanExistentialProjection_eq_takeLeft_image
+#print axioms AbelFormalization.realEuclideanExistentialProjection_closure_subset_closure
+#print axioms AbelFormalization.closure_realEuclideanExistentialProjection_closure_eq

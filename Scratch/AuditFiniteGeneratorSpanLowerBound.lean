@@ -1,0 +1,9 @@
+import AbelFormalization.FiniteGeneratorSpanLowerBound
+
+open AbelFormalization
+
+#print axioms hasInversePowerLowerBound_eval_of_span_le
+#print axioms hasInversePowerLowerBound_eval_of_span_eq
+#print axioms hasInversePowerLowerBound_mvPolynomial_eval₂Hom_of_span_le
+#print axioms hasInversePowerLowerBound_mvPolynomial_eval₂Hom_of_span_eq
+#print axioms EvaluatedPaddedIdealLowerBound.lower_of_span_eq

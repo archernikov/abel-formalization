@@ -1,0 +1,4 @@
+import AbelFormalization.Wilkie28ExceptionalFamilyFinite
+
+#print axioms AbelFormalization.wilkie28_exceptionalParameterSet_mem_literalZeroCharbonnel
+#print axioms AbelFormalization.wilkie28_exceptionalCoordinateValues_finite_of_family_WS5_selection

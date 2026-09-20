@@ -1,0 +1,5 @@
+import AbelFormalization.CharbonnelCompactIntersectionThickening
+
+#print axioms AbelFormalization.compact_closed_intersection_thickening
+#print axioms AbelFormalization.compact_closed_intersection_thickening_two_radii
+#print axioms AbelFormalization.compact_slice_thickening

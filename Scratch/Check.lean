@@ -1,0 +1,9 @@
+import AbelFormalization.AbelNumeratorRestrictedGraphSystem
+#check AnalyticAt.comp
+#check MvPolynomial.eval_eq_eval₂
+#check MvPolynomial.eval₂_at_apply
+#check MvPolynomial.aeval_def
+#check MvPolynomial.eval₂Hom_apply
+#check MvPolynomial.eval₂Hom_eq
+#check MvPolynomial.eval₂Hom_C
+#check RingHom.id_apply

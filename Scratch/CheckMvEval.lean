@@ -1,0 +1,10 @@
+import AbelFormalization.FiniteSupportCoefficientPerturbation
+#check MvPolynomial.eval_eq
+#check MvPolynomial.eval₂_eq
+#check MvPolynomial.eval₂_eq_sum
+#check MvPolynomial.eval_eq_sum
+#check MvPolynomial.sum_def
+#check MvPolynomial.as_sum
+#check MvPolynomial.eval₂_at
+#check MvPolynomial.eval₂Hom_eq
+#check Finset.sum_subset

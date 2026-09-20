@@ -1,0 +1,5 @@
+import AbelFormalization.OrderedClusterAlgebraicDescent
+
+#print axioms AbelFormalization.RepresentativeClusterSubsequence.orderedClusterPrefixSize_top
+#print axioms AbelFormalization.RepresentativeClusterSubsequence.exists_orderedClusterPrefixAlgebraicDescent
+#print axioms AbelFormalization.RepresentativeClusterSubsequence.OrderedClusterPrefixAlgebraicDescent.finalHeight_le

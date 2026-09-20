@@ -1,0 +1,12 @@
+import AbelFormalization.LionUpperNumbersCenterControl
+import Mathlib.Topology.Separation.Regular
+open Set Function
+#check ConnectedComponents.coe_eq_coe'
+#check ConnectedComponents.coe_eq_coe
+#check connectedComponentIn_eq_image
+#check connectedComponentIn_mono
+#check mem_connectedComponentIn
+#check isConnected_connectedComponentIn_iff
+#check isClosed_connectedComponent
+#check isConnected_iff_eq
+#check ConnectedComponents.mk_eq_mk

@@ -1,0 +1,14 @@
+import AbelFormalization.FiniteAnalyticTerminalCoefficientBridge
+
+open AbelFormalization
+
+#print axioms
+  RepresentativeClusterSubsequence.PaddedIdealGeneratorFamily.castIdeal
+#print axioms
+  ClusterAlgebraicReductionCertificate.FullCentralStepDisplayedData.coefficientIdealTimeTarget_span_le
+#print axioms
+  ClusterAlgebraicReductionCertificate.FullCentralStepDisplayedData.clearedTimeTarget_span_le
+#print axioms
+  ClusterAlgebraicReductionCertificate.FullCentralStepDisplayedData.terminalAnalyticSourceValue_lower_of_coefficientValue_lower
+#print axioms
+  ClusterAlgebraicReductionCertificate.FullCentralStepDisplayedData.terminalValue_lower_of_coefficientValue_lower_of_scale_le

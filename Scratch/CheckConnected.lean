@@ -1,0 +1,9 @@
+import AbelFormalization.LionUpperNumbersCenterControl
+open Set Function
+#check IsCompact.elim_directed_family_closed
+#check IsCompact.nonempty_iInter_of_sequence_nonempty_isCompact_isClosed
+#check disjoint_compl_right_iff_subset
+#check disjoint_compl_left_iff_subset
+#check disjoint_iff_inter_eq_empty
+#check Set.not_nonempty_iff_eq_empty
+#check Set.disjoint_left

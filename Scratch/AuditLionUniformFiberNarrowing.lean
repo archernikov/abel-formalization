@@ -1,0 +1,7 @@
+import AbelFormalization.LionUniformFiberNarrowing
+
+#print axioms
+  AbelFormalization.HasFixedSquareRegularFiberComponentEncodingsForFamily.hasUniformFiberFiniteness
+
+#print axioms
+  AbelFormalization.hasUniformFiberFiniteness_of_gabrielovUpperNumbers_of_fixedSquareEncodings

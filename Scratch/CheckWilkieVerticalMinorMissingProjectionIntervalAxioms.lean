@@ -1,0 +1,4 @@
+import AbelFormalization.WilkieVerticalMinorMissingProjectionInterval
+
+#print axioms AbelFormalization.wilkieVerticalMinor_zero_of_missed_projection
+#print axioms AbelFormalization.wilkieVerticalMinor_squared_interval_of_missed_projection

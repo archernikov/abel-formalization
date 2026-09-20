@@ -1,0 +1,14 @@
+import AbelFormalization.RestrictedPairMergeAugmentedRegularZero
+
+#check Fin.succAbove_ne
+#check Fin.succAbove_right_injective
+#check Set.infinite_of_injective_forall_mem
+#check AbelFormalization.exists_restrictedBaseClosedDomain_subset_AbelJetDomain
+#check AbelFormalization.IsAbel.finite_regularZeroSet_terminalLevel_of_base
+#check AbelFormalization.restrictedBaseOpenDomain_subset_closedDomain
+#check Filter.eventually_all
+#check Filter.Eventually.forall
+#check Filter.eventually_atTop
+#check Equiv.cast
+#check ContinuousLinearEquiv.piCongrLeft
+#check AbelFormalization.regularZeroSet_preimage_continuousLinearEquiv

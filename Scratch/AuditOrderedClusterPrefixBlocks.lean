@@ -1,0 +1,5 @@
+import AbelFormalization.OrderedClusterPrefixBlocks
+
+#print axioms AbelFormalization.RepresentativeClusterSubsequence.orderedClusterPrefixTopEquiv
+#print axioms AbelFormalization.RepresentativeClusterSubsequence.orderedClusterPrefixSuccEquiv
+#print axioms AbelFormalization.RepresentativeClusterSubsequence.card_orderedClusterPrefixBlock_succ

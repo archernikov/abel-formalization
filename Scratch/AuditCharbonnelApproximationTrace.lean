@@ -1,0 +1,7 @@
+import AbelFormalization.CharbonnelApproximationTrace
+
+#print axioms AbelFormalization.CharbonnelModulus.halveFirst_isBounded
+#print axioms AbelFormalization.CharbonnelModulus.ApproximatesFromAboveOnBoundedSets.subset_closure_zero
+#print axioms AbelFormalization.CharbonnelModulus.ApproximatesFromAboveOnBoundedSets.descend_positiveZeroTrace
+#print axioms AbelFormalization.exists_closed_emptyInterior_boundaryCarrier_of_approximatesFromAbove
+#print axioms AbelFormalization.wilkie_lemma_3_3

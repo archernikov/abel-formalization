@@ -1,0 +1,61 @@
+Unconditional Abel existence and existential main theorem
+Verified 2026-09-20.
+
+Dependency
+----------
+The only Lake dependency is mathlib, pinned at
+e37d88a26f3791ed5a93daa1f949af1021b8d103.
+Its source checkout is unchanged (git status --short returned no entries).
+Toolchain: leanprover/lean4:v4.34.0-rc2.
+
+Commands run from outputs/AbelFormalization
+------------------------------------------
+$ sh ../../work/run-lake.sh build AbelFormalization.AbelExistence
+Build completed successfully (2841 jobs).
+All new construction modules and the unconditional existence endpoint built.
+
+$ sh ../../work/run-lake.sh env lean -o .lake/build/lib/lean/AbelFormalization/AbelExistentialMainTheorem.olean AbelFormalization/AbelExistentialMainTheorem.lean
+Exit code: 0.
+Combines the new existence witness with the previously built main theorem.
+
+$ sh ../../work/run-lake.sh env lean AbelExistenceAudit.lean
+Exit code: 0.
+Output: ABEL_EXISTENCE_AUDIT_OUTPUT.txt.
+PASS: unconditional Abel existence and existential main theorem; only standard kernel axioms.
+
+$ sh ../../work/run-lake.sh env lean AbelFormalization.lean
+Exit code: 0; no diagnostics.
+The public umbrella import includes AbelExistentialMainTheorem and its dependencies.
+Output: ABEL_EXISTENCE_UMBRELLA_OUTPUT.txt (empty, successful compilation).
+
+Statements checked
+------------------
+AbelFormalization.exists_analytic_invariant_density
+AbelFormalization.exists_isAbel : ∃ A : ℝ → ℝ, IsAbel A
+AbelFormalization.exists_abel_ominimal_expansion
+DraftExistenceAudit.expanded_exists_abel
+
+The expanded audit explicitly proves existence of A satisfying:
+  AnalyticAt ℝ A x for every x > 0;
+  deriv A x > 0 for every x > 0;
+  A 1 = 0;
+  A (Real.exp x - 1) = A x + 1 for every x > 0.
+
+The existence declarations have no hypotheses. The o-minimality corollary
+also includes definability of exp and of the positive-input inverse, and
+transexponential growth of that inverse.
+
+Axiom closure
+-------------
+exists_isAbel: [propext, Classical.choice, Quot.sound]
+exists_abel_ominimal_expansion: [propext, Classical.choice, Quot.sound]
+expanded_exists_abel: [propext, Classical.choice, Quot.sound]
+The executable audit rejects every other axiom in all four checked declarations.
+
+Placeholder scan
+----------------
+No sorry, admit, axiom, opaque, native_decide, or unsafe token occurs in the
+nine new Lean construction/endpoint modules. No external Szekeres result is
+assumed. A separate semantic review confirmed the invariance direction,
+positive normalization constant, exact four IsAbel fields, and lack of
+circular dependence on an existing Abel function.

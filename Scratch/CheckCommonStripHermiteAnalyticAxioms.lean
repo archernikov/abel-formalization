@@ -1,0 +1,4 @@
+import AbelFormalization.CommonStripHermiteAnalytic
+
+#print axioms AbelFormalization.normalizedHermiteCoeff_analyticAt_joint_center_nodes
+#print axioms AbelFormalization.normalizedHermiteCoeff_analyticAt_commonStrip

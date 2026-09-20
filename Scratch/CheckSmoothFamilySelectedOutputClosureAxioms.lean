@@ -1,0 +1,5 @@
+import AbelFormalization.SmoothFamilySelectedOutputClosure
+
+#print axioms AbelFormalization.FunctionTupleInFamily.selectedOutputMap
+#print axioms AbelFormalization.IsGeometricFunctionFamily.selectedOutput_sub_mem
+#print axioms AbelFormalization.MaximalDerivativeRankCertificate.exists_local_family_selectedOutput_fiber_eq

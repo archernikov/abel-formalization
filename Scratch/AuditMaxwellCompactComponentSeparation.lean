@@ -1,0 +1,7 @@
+import AbelFormalization.MaxwellCompactComponentSeparation
+
+open AbelFormalization
+
+#print axioms exists_pos_defect_threshold_of_compact
+#print axioms enatCard_fin_succ_le_some_maxwellStrictTube_components
+#print axioms enatCard_connectedComponents_maxwellLimitFiber_le

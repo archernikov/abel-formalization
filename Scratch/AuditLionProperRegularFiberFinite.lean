@@ -1,0 +1,5 @@
+import AbelFormalization.LionProperRegularFiberFinite
+
+#print axioms AbelFormalization.finite_fullFiber_of_proper_regular_target
+#print axioms AbelFormalization.forall_regular_target_finite_fullFiber_of_proper
+#print axioms AbelFormalization.finite_smoothRegularFiber_of_proper_regular_target

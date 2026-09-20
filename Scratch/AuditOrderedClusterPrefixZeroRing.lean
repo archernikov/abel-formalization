@@ -1,0 +1,4 @@
+import AbelFormalization.OrderedClusterPrefixZeroRing
+
+#print axioms AbelFormalization.RepresentativeClusterSubsequence.orderedClusterPrefixBlockZeroIsEmpty
+#print axioms AbelFormalization.RepresentativeClusterSubsequence.orderedClusterPrefixRingZeroAlgEquiv

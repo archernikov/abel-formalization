@@ -1,0 +1,11 @@
+import AbelFormalization.IndividualClusterBalancingHierarchy
+
+open AbelFormalization
+
+#print axioms clusterShiftedTimes_append
+#print axioms clusterShiftedTimes_le_take
+#print axioms ClusterBalancingPlan.prefix_selected_is_currentMaximum
+#print axioms ClusterBalancingPlan.prefix_selected_is_oneAboveBase
+#print axioms IsAbel.clusterBalancingStepValue_div_log_postScale_tendsto
+#print axioms IsAbel.clusterBalancingStep_transferHierarchies
+#print axioms IsAbel.orderedClusterBalancingStep_transferHierarchies

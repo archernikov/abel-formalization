@@ -1,0 +1,11 @@
+import AbelFormalization.OrderedClusterPreprocessedAlgebraicDescent
+
+open AbelFormalization
+open AbelFormalization.RepresentativeClusterSubsequence
+
+#print axioms exists_orderedClusterPreprocessedAlgebraicDescent
+#print axioms exists_orderedClusterPreprocessedAlgebraicDescent_realAnalyticGerm
+#print axioms OrderedClusterPreprocessedAlgebraicDescent.prefixHeight_le
+#print axioms OrderedClusterPreprocessedAlgebraicDescent.finalHeight_le
+#print axioms OrderedClusterPreprocessedAlgebraicDescent.tailAt
+#print axioms OrderedClusterPreprocessedAlgebraicDescent.stageAt

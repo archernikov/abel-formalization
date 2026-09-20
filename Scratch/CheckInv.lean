@@ -1,0 +1,12 @@
+import AbelFormalization.LionCarpetCompactification
+#check one_div_le_one_div_of_le
+#check inv_le_inv₀
+#check inv_le_inv₀ₓ
+#check Nat.cast_le
+#check exists_nat_gt
+#check exists_nat_one_div_lt
+#check exists_nat_gt_inv
+#check Nat.one_div_lt
+#check tendsto_natCast_atTop_atTop
+#check tendsto_inv_atTop_zero
+#check Filter.Tendsto.exists_lt_of_tendsto_atTop

@@ -1,0 +1,4 @@
+import AbelFormalization.OrderedClusterPrefixAnalyticDimension
+
+#print axioms AbelFormalization.RepresentativeClusterSubsequence.orderedClusterPrefixRing_krullDimLE
+#print axioms AbelFormalization.RepresentativeClusterSubsequence.exists_orderedClusterPrefixAlgebraicDescent_realAnalyticGerm

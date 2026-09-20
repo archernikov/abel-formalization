@@ -1,0 +1,13 @@
+import AbelFormalization.ClusterAlgebraicReduction
+#check MvPolynomial.aeval
+#check MvPolynomial.aeval_X
+#check MvPolynomial.eval₂Hom
+#check MvPolynomial.eval₂Hom_X'
+#check MvPolynomial.eval₂Hom_C'
+#check Fintype.equivFin
+#check MonomialOrder.lex
+#check AbelFormalization.exists_clusterAlgebraicReductionCertificate
+#check AlgHom.comp
+#check RingHom.comp
+#check Equiv.Finset.union
+#check Finset.biUnion

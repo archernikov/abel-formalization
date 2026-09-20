@@ -1,0 +1,9 @@
+import AbelFormalization.IndividualCentralRealJetIdentities
+
+open AbelFormalization
+
+#print axioms IndividualCentralTransferData.nonempty_displayedData
+#print axioms IndividualCentralTransferData.DisplayedData.before_span
+#print axioms IndividualCentralTransferData.DisplayedData.after_span
+#print axioms nonempty_individualCentralDisplayedTraceData
+#print axioms IndividualCentralDisplayedTraceData.after_span_boundary_succ

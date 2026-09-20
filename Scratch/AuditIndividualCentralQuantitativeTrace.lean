@@ -1,0 +1,5 @@
+import AbelFormalization.IndividualCentralQuantitativeTrace
+
+open AbelFormalization
+
+#print axioms IndividualCentralDisplayedTraceData.boundaryLower_zero_of_last

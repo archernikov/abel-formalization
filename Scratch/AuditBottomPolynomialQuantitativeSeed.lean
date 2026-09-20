@@ -1,0 +1,7 @@
+import AbelFormalization.BottomPolynomialQuantitativeSeed
+
+open AbelFormalization
+
+#print axioms eval₂Hom_scalarUnivariateEmbedding
+#print axioms RepresentativeClusterSubsequence.PaddedIdealGeneratorFamily.lower_of_scalarUnivariateEmbedding_mem
+#print axioms RepresentativeClusterSubsequence.PaddedIdealGeneratorFamily.evaluatedLowerBound_of_scalarUnivariateEmbedding_mem

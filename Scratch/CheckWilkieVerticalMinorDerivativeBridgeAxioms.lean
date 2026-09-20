@@ -1,0 +1,5 @@
+import AbelFormalization.WilkieVerticalMinorDerivativeBridge
+
+#print axioms AbelFormalization.wilkieVisibleFiberSquareMap_hasStrictFDerivAt_of_verticalMinor
+#print axioms AbelFormalization.wilkieVerticalMinor_squareChart_of_verticalMinor
+#print axioms AbelFormalization.wilkieVerticalMinor_component_projection_eq_of_nonzeroMinor

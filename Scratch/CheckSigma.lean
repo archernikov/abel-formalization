@@ -1,0 +1,9 @@
+import AbelFormalization.LionRankPatchLocalRegularSubtupleReduction
+#check Function.Embedding.ext
+#check Equiv.ext
+#check EquivLike.ext
+#check DFunLike.ext
+#check heq_eq_eq
+#check eqRec_heq
+#check cast_heq
+#check eq_mp_eq_cast

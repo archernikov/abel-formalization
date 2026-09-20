@@ -1,0 +1,7 @@
+import AbelFormalization.LionGlobalSubmersionFixedSquare
+
+#print axioms AbelFormalization.contDiff_flatParameterRecordingMap
+#print axioms AbelFormalization.surjective_fderiv_flatParameterRecordingMap
+#print axioms AbelFormalization.IsGeometricFunctionFamily.lagrangeParameterRecordingSquareMap_mem
+#print axioms AbelFormalization.exists_center_regular_lagrangeCriticalSystem_at_target
+#print axioms AbelFormalization.lagrangeCriticalSystemMap_append_eq_target_iff

@@ -1,0 +1,5 @@
+import AbelFormalization.Wilkie28ExceptionalMathlibOnly
+
+#print axioms Wilkie28MathlibOnly.augmented_surjective_of_kernel_value_one
+#print axioms Wilkie28MathlibOnly.augmented_surjective_along_differentiable_section
+#print axioms Wilkie28MathlibOnly.exceptionalParameterSet_finite_of_tameness_and_smooth_selection

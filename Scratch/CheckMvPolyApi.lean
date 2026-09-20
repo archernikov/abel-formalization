@@ -1,0 +1,16 @@
+import AbelFormalization.AbelGeometricFamily
+#check MvPolynomial.bind₁
+#check MvPolynomial.bind₁_X
+#check MvPolynomial.eval₂_bind₁
+#check MvPolynomial.eval_bind₁
+#check MvPolynomial.eval₂_rename
+#check MvPolynomial.eval_rename
+#check MvPolynomial.rename_add
+#check MvPolynomial.rename_mul
+#check MvPolynomial.rename_X
+#check AffineMap.comp
+#check AffineMap.proj
+#check Equiv.sumCongr
+#check Fin.addCases
+#check Fin.castAdd
+#check Fin.natAdd

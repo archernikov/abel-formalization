@@ -1,0 +1,14 @@
+AbelFormalization.exists_analytic_invariant_density :
+  ∃ b, AnalyticOnNhd ℝ b (Set.Ioi 0) ∧ (∀ x > 0, 0 < b x) ∧ ∀ x > 0, b (AbelFormalization.E x) * Real.exp x = b x
+AbelFormalization.exists_isAbel : ∃ A, AbelFormalization.IsAbel A
+AbelFormalization.exists_abel_ominimal_expansion :
+  ∃ A,
+    AbelFormalization.IsAbel A ∧
+      AbelFormalization.OMinimal A ∧
+        AbelFormalization.ExponentialDefinable A ∧
+          AbelFormalization.PositiveInverseDefinable A (AbelFormalization.inverse A) ∧
+            AbelFormalization.IsTransexponential (AbelFormalization.inverse A)
+'AbelFormalization.exists_isAbel' depends on axioms: [propext, Classical.choice, Quot.sound]
+'AbelFormalization.exists_abel_ominimal_expansion' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DraftExistenceAudit.expanded_exists_abel' depends on axioms: [propext, Classical.choice, Quot.sound]
+PASS: unconditional Abel existence and existential main theorem; only standard kernel axioms.

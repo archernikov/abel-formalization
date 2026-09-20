@@ -1,0 +1,7 @@
+import AbelFormalization.IndividualCentralRealJetEvaluation
+
+#print axioms AbelFormalization.eval₂Hom_selectedBlockCurryAlgEquiv
+#print axioms AbelFormalization.eval₂Hom_sourceTranslation_symm_preLog
+#print axioms AbelFormalization.eval₂Hom_rename_inr_postLog
+#print axioms AbelFormalization.IndividualCentralTransferData.DisplayedData.eval_beforeGenerator_preLog
+#print axioms AbelFormalization.IndividualCentralTransferData.DisplayedData.eval_afterGenerator_postLog

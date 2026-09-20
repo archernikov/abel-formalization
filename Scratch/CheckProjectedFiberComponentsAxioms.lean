@@ -1,0 +1,3 @@
+import AbelFormalization.ProjectedFiberComponents
+#print axioms AbelFormalization.enatCard_connectedComponents_flatProjectedFiberSet_le
+#print axioms AbelFormalization.HasUniformFiberFiniteness.exists_flatProjectedFiber_component_bound

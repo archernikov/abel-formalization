@@ -1,0 +1,3 @@
+import AbelFormalization.WilkieFiniteVisibleProjectionCase
+
+#print axioms AbelFormalization.wilkieFiniteVisibleImage_sameMinor_squared_interval

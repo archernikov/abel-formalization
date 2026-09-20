@@ -1,0 +1,11 @@
+import AbelFormalization.LionRankPatchLocalRegularSubtupleReduction
+#check hasFDerivAt_apply
+#check hasFDerivAt_apply_const
+#check hasFDerivAt_cl_apply
+#check hasFDerivAt_eval
+#check HasFDerivAt.cl_apply
+#check ContinuousLinearMap.apply
+#check ContinuousLinearMap.applyₗ
+#check ContinuousLinearMap.applyₗ'
+#check ContinuousLinearMap.apply_apply
+#check ContinuousLinearMap.proj_apply

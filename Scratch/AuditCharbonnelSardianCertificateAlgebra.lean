@@ -1,0 +1,8 @@
+import AbelFormalization.CharbonnelSardianCertificateAlgebra
+
+#print axioms AbelFormalization.CharbonnelFiniteSardianFamily.union
+#print axioms AbelFormalization.CharbonnelFiniteSardianFamily.carrier_union
+#print axioms AbelFormalization.CharbonnelSardianApproximationCertificate.toAtHiddenArity
+#print axioms AbelFormalization.CharbonnelSardianApproximationCertificate.AtHiddenArity.toCertificate
+#print axioms AbelFormalization.CharbonnelSardianApproximationCertificate.AtHiddenArity.union
+#print axioms AbelFormalization.CharbonnelSardianApproximationCertificate.unionOfSameHiddenArity

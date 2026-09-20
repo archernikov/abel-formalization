@@ -1,0 +1,3 @@
+import AbelFormalization.SeparatedNumericRealJetStep
+
+#print axioms AbelFormalization.TerminalGeneratorBackwardIdentity.terminal_lower_of_realJet_transfer_numeric

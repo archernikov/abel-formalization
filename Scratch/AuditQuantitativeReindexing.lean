@@ -1,0 +1,7 @@
+import AbelFormalization.QuantitativeReindexing
+
+#print axioms AbelFormalization.HasPolynomialUpperBound.comp_tendsto
+#print axioms AbelFormalization.HasUniformPolynomialUpperBound.comp_tendsto
+#print axioms AbelFormalization.HasScalarInversePowerLowerBound.comp_tendsto
+#print axioms AbelFormalization.HasInversePowerLowerBound.comp_tendsto
+#print axioms AbelFormalization.Asymptotics.SuperpolynomialDecay.comp_tendsto

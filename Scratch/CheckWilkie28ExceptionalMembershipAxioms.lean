@@ -1,0 +1,14 @@
+import Scratch.AuditWilkie28ExceptionalMembership
+
+/-! Axiom audit for the staged Wilkie 2.8 membership bridge. -/
+
+namespace AbelFormalization
+
+#print axioms wilkie28AugmentedTuple_fderiv_surjective_iff
+#print axioms wilkie28ExceptionalResidual_mem
+#print axioms wilkie28FlatExceptionalSlice_isProjectedZeroSet
+#print axioms wilkie28FlatExceptionalSlice_eq_exceptionalParameterSet
+#print axioms wilkie28_exceptionalParameterSet_rank_one_literalZero_description
+#print axioms wilkie28_exceptionalParameterSet_mem_literalZeroCharbonnel
+
+end AbelFormalization

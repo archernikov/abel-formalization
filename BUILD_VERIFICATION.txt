@@ -1,0 +1,57 @@
+Complete mathlib-only formalization: AbelFormalization.mainTheorem is proved.
+Verified 2026-09-20.
+
+Lean toolchain
+--------------
+Lean (version 4.34.0-rc2, arm64-apple-darwin24.6.0,
+commit 6a10ac8c22beadecabdbb0919c2b50214762f91d, Release)
+
+Dependency
+----------
+The only Lake dependency is mathlib, pinned in lakefile.toml at
+e37d88a26f3791ed5a93daa1f949af1021b8d103.
+
+Verification commands and results
+---------------------------------
+$ sh ../../work/run-lake.sh build AbelFormalization.WilkieDirectTraceExactResidualPipeline
+Build completed successfully (4199 jobs).
+
+$ sh ../../work/run-lake.sh build AbelFormalization.WilkieSection4DeepMainTheoremEndpoint
+Build completed successfully (4208 jobs).
+
+$ sh ../../work/run-lake.sh env lean AbelFormalization/WilkieSection4LiteralZeroInduction.lean
+Exit code: 0
+
+$ sh ../../work/run-lake.sh build AbelFormalization.WilkieSection4LiteralZeroInduction
+Build completed successfully (4224 jobs).
+
+$ sh ../../work/run-lake.sh build AbelFormalization
+Build completed successfully (4280 jobs).
+
+$ sh ../../work/run-lake.sh env lean Audit.lean
+Exit code: 0
+All 20624 project declarations pass, including 14732 theorem declarations
+(generated helpers included). AbelFormalization.mainTheorem is included.
+
+Kernel axiom report
+-------------------
+#print axioms AbelFormalization.mainTheorem
+[propext, Classical.choice, Quot.sound]
+
+Placeholder scan
+----------------
+No `sorry`, `admit`, `axiom`, `opaque`, `native_decide`, or `unsafe`
+occurs in the new Section 4 endpoint chain. The whole-library Audit.lean check
+rejects every project declaration using an axiom outside the three kernel
+principles listed above.
+
+Existence addendum (2026-09-20)
+-------------------------------
+AbelFormalization.exists_isAbel now proves ∃ A : ℝ → ℝ, IsAbel A with no premises.
+AbelFormalization.exists_abel_ominimal_expansion supplies the existential main theorem.
+The new existence modules passed a targeted Lake build (2841 jobs); the
+existential corollary and public umbrella passed direct Lean compilation.
+AbelExistenceAudit.lean passed its expanded-statement and axiom-closure checks.
+All checked endpoints use only [propext, Classical.choice, Quot.sound].
+Exact commands and results: ABEL_EXISTENCE_VERIFICATION.txt.
+Raw audit output: ABEL_EXISTENCE_AUDIT_OUTPUT.txt.

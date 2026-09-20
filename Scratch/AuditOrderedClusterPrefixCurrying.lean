@@ -1,0 +1,5 @@
+import AbelFormalization.OrderedClusterPrefixCurrying
+
+#print axioms AbelFormalization.clusterOperationSymbolEquiv
+#print axioms AbelFormalization.RepresentativeClusterSubsequence.orderedClusterPrefixOperationEquiv
+#print axioms AbelFormalization.RepresentativeClusterSubsequence.orderedClusterPrefixCurryAlgEquiv

@@ -1,0 +1,14 @@
+import AbelFormalization.CharbonnelSardianLiteralZeroRadialBase
+
+open AbelFormalization
+
+#print axioms AbelFormalization.literalZeroRadialDenominator_mem
+#print axioms AbelFormalization.literalZeroRadialReciprocal_mem
+#print axioms AbelFormalization.literalZeroSquaredLift_mem
+#print axioms AbelFormalization.literalZeroRadialConstituent
+#print axioms AbelFormalization.literalZeroRadialReciprocal_visible_bound
+#print axioms AbelFormalization.literalZeroRadialReciprocal_escape
+#print axioms AbelFormalization.mem_literalZeroRadialConstituent_carrier_iff
+#print axioms AbelFormalization.literalZeroRadialFamily_carrier_eq
+#print axioms AbelFormalization.literalZeroRadialCertificate
+#print axioms AbelFormalization.charbonnelSardianLiteralZeroBaseInput_of_radialLevels

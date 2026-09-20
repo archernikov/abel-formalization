@@ -1,0 +1,4 @@
+import AbelFormalization.AnalyticPolynomialEvaluationBounds
+
+#print axioms AbelFormalization.analyticMvPolynomialEvaluation_hasPolynomialUpperBound
+#print axioms AbelFormalization.analyticCurriedCoefficientEvaluation_hasPolynomialUpperBound

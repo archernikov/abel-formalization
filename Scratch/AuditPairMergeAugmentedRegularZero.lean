@@ -1,0 +1,3 @@
+import AbelFormalization.RestrictedPairMergeAugmentedRegularZero
+
+#print axioms AbelFormalization.IsAbel.mem_regularZeroSet_pairMergeDenominatorClearedAugmented_graphLift_iff

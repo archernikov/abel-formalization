@@ -1,0 +1,4 @@
+import AbelFormalization.WilkieArbitraryMinorDerivativeBridge
+
+#print axioms AbelFormalization.wilkieColumnComplementarySquareMap_hasStrictFDerivAt_of_minor
+#print axioms AbelFormalization.wilkieColumnComplementaryProjection_fullComponent_squareChart

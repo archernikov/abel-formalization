@@ -1,0 +1,22 @@
+structure AbelFormalization.IsAbel (A : ℝ → ℝ) : Prop
+number of parameters: 1
+fields:
+  AbelFormalization.IsAbel.analytic : AnalyticOnNhd ℝ A (Set.Ioi 0)
+  AbelFormalization.IsAbel.deriv_pos : ∀ x > 0, 0 < deriv A x
+  AbelFormalization.IsAbel.normalized : A 1 = 0
+  AbelFormalization.IsAbel.abel : ∀ x > 0, A (AbelFormalization.E x) = A x + 1
+constructor:
+  AbelFormalization.IsAbel.mk {A : ℝ → ℝ} (analytic : AnalyticOnNhd ℝ A (Set.Ioi 0))
+    (deriv_pos : ∀ x > 0, 0 < deriv A x) (normalized : A 1 = 0) (abel : ∀ x > 0, A (AbelFormalization.E x) = A x + 1) :
+    AbelFormalization.IsAbel A
+def AbelFormalization.MainTheorem : Prop :=
+∀ (A : ℝ → ℝ),
+  AbelFormalization.IsAbel A →
+    AbelFormalization.OMinimal A ∧
+      AbelFormalization.ExponentialDefinable A ∧
+        AbelFormalization.PositiveInverseDefinable A (AbelFormalization.inverse A) ∧
+          AbelFormalization.IsTransexponential (AbelFormalization.inverse A)
+AbelFormalization.mainTheorem : AbelFormalization.MainTheorem
+'AbelFormalization.mainTheorem' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DraftStatementAudit.expanded_main_theorem' depends on axioms: [propext, Classical.choice, Quot.sound]
+PASS: expanded draft statement, with only standard kernel axioms.

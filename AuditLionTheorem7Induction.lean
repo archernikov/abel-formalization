@@ -1,0 +1,5 @@
+import AbelFormalization.LionTheorem7Induction
+
+#print axioms AbelFormalization.lionTheorem7_dimensionTarget_induction
+#print axioms AbelFormalization.enatCard_connectedComponents_le_sum_of_lionRolleSections
+#print axioms AbelFormalization.IsZeroRegularFunctionFamily.exists_sum_bound_of_regularFiberEncodings

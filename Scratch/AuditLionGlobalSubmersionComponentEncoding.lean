@@ -1,0 +1,6 @@
+import AbelFormalization.LionGlobalSubmersionComponentEncoding
+
+open AbelFormalization
+
+#print axioms AbelFormalization.componentMinimizer_isLocalMinOn_rawFiber
+#print axioms AbelFormalization.fixedSquareRegularFiberComponentEncoding_of_globalSubmersion

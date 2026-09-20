@@ -1,0 +1,14 @@
+import AbelFormalization.SeparatedFiniteRealJetTrace
+#check finSumFinEquiv
+#check Equiv.sumEquivSigmaBool
+#check Fin.castSucc
+#check Fin.castLE
+#check Fin.natAdd
+#check Fin.addNat
+#check Equiv.sumCongr
+#check MvPolynomial.rename_injective
+#check MvPolynomial.rename_injective_of_injective
+#check Ideal.map_span
+#check Ideal.map_span_eq
+#check Ideal.map_span_range
+#check Ideal.map_mono

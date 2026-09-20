@@ -1,0 +1,4 @@
+import AbelFormalization.WilkieVerticalMinorLocalProjection
+
+#print axioms AbelFormalization.wilkieVerticalMinor_localProjectedNeighborhood_of_squareChart
+#print axioms AbelFormalization.wilkieVerticalMinor_component_projection_eq_of_squareChart

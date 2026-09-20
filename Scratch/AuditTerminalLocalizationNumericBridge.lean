@@ -1,0 +1,4 @@
+import AbelFormalization.TerminalLocalizationNumericBridge
+
+#print axioms AbelFormalization.TerminalGeneratorBackwardIdentity.terminal_lower_of_numeric_identity
+#print axioms AbelFormalization.ClusterAlgebraicReductionCertificate.FullCentralStepDisplayedData.terminal_lower_of_numeric_time_lower

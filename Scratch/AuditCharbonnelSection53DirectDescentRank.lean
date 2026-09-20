@@ -1,0 +1,3 @@
+import AbelFormalization.CharbonnelSection53DirectDescentRank
+
+#print axioms AbelFormalization.charbonnelSection53_directLexDescent_strictlyLowersCount

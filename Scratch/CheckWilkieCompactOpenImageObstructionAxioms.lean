@@ -1,0 +1,4 @@
+import AbelFormalization.WilkieCompactOpenImageObstruction
+
+#print axioms AbelFormalization.compact_nonempty_image_not_open
+#print axioms AbelFormalization.fixed_minor_zero_of_compact_component_and_open_chart

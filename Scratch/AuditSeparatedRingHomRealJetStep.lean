@@ -1,0 +1,4 @@
+import AbelFormalization.SeparatedRingHomRealJetStep
+
+#print axioms AbelFormalization.TerminalGeneratorBackwardIdentity.terminal_lower_of_realJet_transfer_ringHom
+#print axioms AbelFormalization.TerminalGeneratorBackwardIdentity.terminal_lower_of_realJet_transfer_coefficientwise

@@ -1,0 +1,19 @@
+import AbelFormalization.FiniteFamilyFlattening
+
+open AbelFormalization FiniteFamilyFlattening
+
+#print axioms FiniteFamilyFlattening.prefixOffset_succ
+#print axioms FiniteFamilyFlattening.prefixOffset_last
+#print axioms FiniteFamilyFlattening.flattenEquiv_flattenIndex
+#print axioms FiniteFamilyFlattening.flattenIndex_lookup
+#print axioms FiniteFamilyFlattening.flattenIndex_val
+#print axioms FiniteFamilyFlattening.flattenIndex_mem_block
+#print axioms FiniteFamilyFlattening.boundaryIndex_terminal_eq_initial
+#print axioms FiniteFamilyFlattening.boundaryIndex_last
+#print axioms FiniteFamilyFlattening.CompatibleBoundaryFamily.concatenate_seam
+#print axioms FiniteFamilyFlattening.CompatibleBoundaryFamily.concatenate_last
+#print axioms FiniteFamilyFlattening.CompatibleBoundaryFamily.natFamily_succ_flattenIndex
+#print axioms FiniteFamilyFlattening.orderedClusterTransferEquiv_clusterTransferIndex
+#print axioms FiniteFamilyFlattening.clusterTransferIndex_individual_val
+#print axioms FiniteFamilyFlattening.clusterTransferIndex_firstSimultaneous_val
+#print axioms FiniteFamilyFlattening.clusterTransferIndex_extraRetained_val

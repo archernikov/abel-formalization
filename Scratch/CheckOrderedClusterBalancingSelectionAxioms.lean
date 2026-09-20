@@ -1,0 +1,5 @@
+import AbelFormalization.OrderedClusterBalancingSelection
+
+#print axioms AbelFormalization.RepresentativeClusterSubsequence.orderedClusterTailSize_add_one
+#print axioms AbelFormalization.RepresentativeClusterSubsequence.orderedClusterEnumeration_mem
+#print axioms AbelFormalization.RepresentativeClusterSubsequence.exists_fixed_orderedClusterBalancing_subsequence

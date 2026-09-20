@@ -1,0 +1,10 @@
+import AbelFormalization.IndividualCentralIdealStep
+
+open AbelFormalization
+
+#print axioms selectedBlockSumEquiv
+#print axioms selectedBlockCurryAlgEquiv
+#print axioms individualCentralIdealStep_height_le
+#print axioms nonempty_individualCentralTransferData
+#print axioms IndividualCentralTransferData.retained_span_eq_step
+#print axioms individualCentralIdealSteps_height_le

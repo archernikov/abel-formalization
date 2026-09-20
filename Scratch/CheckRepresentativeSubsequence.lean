@@ -1,0 +1,11 @@
+import AbelFormalization.RestrictedRepresentativeSubsequence
+#check @AbelFormalization.Set.Infinite.exists_classified_restrictedRegularZeroSequence
+#check AbelFormalization.Set.Infinite.exists_classified_restrictedRegularZeroSequence
+#check @AbelFormalization.constraintMap
+#check HasFDerivAt.hasDerivAt
+#check HasFDerivAt.comp_hasDerivAt
+#check HasDerivAt.comp_hasFDerivAt
+#check HasFDerivAt.prodMk
+#check HasDerivAt.prodMk
+#check HasDerivAt.const_add
+#check HasDerivAt.congr_of_eventuallyEq

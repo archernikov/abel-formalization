@@ -1,0 +1,8 @@
+import AbelFormalization.CharbonnelSardianIntegerAffineSliceGeometry
+
+#print axioms AbelFormalization.isIntegerAffineSet_integerAffineSliceHyperplane
+#print axioms AbelFormalization.IsIntegerAffineSet.exists_sliceHyperplane_presentation
+#print axioms AbelFormalization.integerAffineSliceLevelEquation_mem
+#print axioms AbelFormalization.integerAffineSliceLevelEquation_append
+#print axioms AbelFormalization.integerAffineSliceLevel_exists_iff
+#print axioms AbelFormalization.closed_slice_frontier_condition_iff

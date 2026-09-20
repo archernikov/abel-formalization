@@ -1,0 +1,8 @@
+import AbelFormalization.OrderedClusterPreprocessedBottomPolynomial
+
+open AbelFormalization
+open AbelFormalization.RepresentativeClusterSubsequence
+
+#print axioms extract_under_coefficient_equiv
+#print axioms exists_bottom_preprocessed_certificate_height
+#print axioms exists_bottom_preprocessed_timePolynomial

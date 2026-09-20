@@ -1,0 +1,11 @@
+import AbelFormalization.CharbonnelMaxwellClosureBound
+
+open AbelFormalization
+
+#print axioms maxwellFixed_append_mem_thickening_iff
+#print axioms
+  enatCard_connectedComponents_maxwellStrictTube_eq_fixedParameterSection
+#print axioms
+  enatCard_connectedComponents_closure_affineSection_le_of_maxwellReplacement
+#print axioms
+  CharbonnelDescription.hasAffineSectionComponentBound_topologicalClosure

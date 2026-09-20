@@ -1,0 +1,9 @@
+import AbelFormalization.SeparatedClustersReduction
+open Filter
+#check Filter.Eventually.exists
+#check Filter.Eventually.exists_mem
+#check Filter.NeBot.ne
+#check Filter.Eventually.false_iff_eq_bot
+#check Filter.neBot_iff
+#check not_eventually
+#check Filter.Eventually.not_forall

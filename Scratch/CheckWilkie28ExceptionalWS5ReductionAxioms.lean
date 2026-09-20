@@ -1,0 +1,4 @@
+import AbelFormalization.Wilkie28ExceptionalWS5Reduction
+
+#print axioms AbelFormalization.PositiveArityOMinimalWeakSetStructure.finite_unary_member_of_empty_interior
+#print axioms AbelFormalization.wilkie28_exceptionalCoordinateValues_finite_of_WS5_and_selection

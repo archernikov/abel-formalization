@@ -1,0 +1,12 @@
+import AbelFormalization.LionFixedMinorConstantRankComponentEncoding
+
+open AbelFormalization
+
+#print axioms
+  AbelFormalization.componentMinimizer_isLocalMinOn_of_localConstraintFiber
+#print axioms
+  AbelFormalization.componentMinimizer_isLocalMinOn_selectedOutputFiber
+#print axioms
+  AbelFormalization.fixedSquareRegularFiberComponentEncoding_of_fixedMinor_rank_le
+#print axioms
+  AbelFormalization.exists_uniform_component_bound_of_fixedMinor_rank_le

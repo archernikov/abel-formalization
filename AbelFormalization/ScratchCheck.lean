@@ -1,0 +1,9 @@
+import AbelFormalization.LionLemma4RegularMinorCover
+#check fderiv_prod
+#check fderiv_prodMk
+#check fderiv_fst
+#check HasFDerivAt.prodMk
+#check HasFDerivAt.fst
+#check HasFDerivAt.snd
+#check ContinuousLinearMap.prod_apply
+#check ContinuousLinearMap.prod_fst

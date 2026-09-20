@@ -1,0 +1,3 @@
+import AbelFormalization.RestrictedAllUnboundedSeparatedSetup
+
+#print axioms AbelFormalization.IsAbel.exists_restrictedAllUnboundedSeparatedSetup_q_add_two

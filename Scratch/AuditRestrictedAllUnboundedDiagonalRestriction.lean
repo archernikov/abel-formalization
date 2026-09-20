@@ -1,0 +1,10 @@
+import AbelFormalization.RestrictedAllUnboundedDiagonalRestriction
+
+open AbelFormalization
+
+#print axioms diagonalSubsequenceOfInfiniteSets_strictMono
+#print axioms eventually_diagonalSubsequenceOfInfiniteSets_mem
+#print axioms IsAbel.restrictedAllUnboundedSeparationSet_antitone
+#print axioms restrictedAllUnboundedSeparationSet_restrictToFurtherSubsequence
+#print axioms IsAbel.diagonalSeparatedAmbientSequence_eventually_mem
+#print axioms IsAbel.diagonalSeparatedRankTailSequence_mem

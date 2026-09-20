@@ -1,0 +1,19 @@
+import AbelFormalization.HermiteRankPreprocessedIndividualBoundaryValues
+
+open AbelFormalization
+
+#check List.count_append
+#check List.count_cons
+#check take_succ_eq_take_append_get
+#check List.getElem_take
+#check List.get_take
+#check Fin.cast
+#check HasPolynomialUpperBound.of_tendsto
+#check HasPolynomialUpperBound.congr
+#check IsAbel.exists_log_upper_bound
+#check RepresentativeClusterSubsequence.orderedClusterPrefixConstantDerivativeCount
+#check clusterBalancingPrefixValue_succ_selected
+#check clusterBalancingPrefixValue_succ_of_ne
+#check selectedBlockActiveAssignment
+#check selectedBlockCoefficientAssignment
+#check selectedBlockAssignment_eq_sum_elim

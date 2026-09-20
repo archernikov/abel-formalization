@@ -1,0 +1,11 @@
+import AbelFormalization.CharbonnelAffineSectionRankInduction
+
+open AbelFormalization
+
+#print axioms IsLiteralZeroSet.isProjectedZeroSet
+#print axioms enatCard_connectedComponents_union_le
+#print axioms IsIntegerAffineSet.exists_affineSubspace
+#print axioms
+  enatCard_connectedComponents_existentialProjection_affineSection_le
+#print axioms CharbonnelDescription.hasAffineSectionComponentBound
+#print axioms literalZeroSet_charbonnelClosure_ws5_affineSections

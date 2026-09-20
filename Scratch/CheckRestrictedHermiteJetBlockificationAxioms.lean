@@ -1,0 +1,7 @@
+import AbelFormalization.RestrictedHermiteJetBlockification
+
+#print axioms AbelFormalization.AbelHermiteFamilySpec.shifted_iteratedDeriv_realAgreement
+#print axioms AbelFormalization.eval₂Hom_paperRankHermiteJetPolynomial
+#print axioms AbelFormalization.eval₂Hom_paperRankHermiteClusterCurryHom
+#print axioms AbelFormalization.span_paperRankHermiteGermClusterCurryHom_eq
+#print axioms AbelFormalization.IsAbel.exists_paperRankHermiteJetBlockification

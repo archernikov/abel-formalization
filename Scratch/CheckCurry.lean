@@ -1,0 +1,7 @@
+import AbelFormalization.RestrictedRankHermiteClusterRepresentatives
+open AbelFormalization
+#check terminalSumAlgEquiv_symm_coeff
+#check Finsupp.sumFinsuppAddEquivProdFinsupp
+#check Finsupp.mapDomain_equiv_apply
+#check Finsupp.mapDomain_comp
+#check Equiv.mapDomain_apply

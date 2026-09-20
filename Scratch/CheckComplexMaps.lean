@@ -1,0 +1,10 @@
+import AbelFormalization.HermiteFamilyAnalytic
+#check AnalyticAt.restrictScalars
+#check Complex.ofRealCLM
+#check Complex.reCLM
+#check Complex.reCLM_apply
+#check ContinuousLinearMap.analyticAt
+#check AnalyticAt.clm_apply
+#check AnalyticAt.continuousLinearMap_apply
+#check AnalyticAt.comp
+#check AnalyticAt.fun_comp

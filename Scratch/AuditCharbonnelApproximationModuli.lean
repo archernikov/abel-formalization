@@ -1,0 +1,18 @@
+import AbelFormalization.CharbonnelApproximationModuli
+
+#print axioms AbelFormalization.CharbonnelModulus.IsBounded
+#print axioms AbelFormalization.CharbonnelModulus.refines_refl
+#print axioms AbelFormalization.CharbonnelModulus.Refines.trans
+#print axioms AbelFormalization.CharbonnelModulus.infimum
+#print axioms AbelFormalization.CharbonnelModulus.isBounded_infimum_iff
+#print axioms AbelFormalization.CharbonnelModulus.infimum_refines_left
+#print axioms AbelFormalization.CharbonnelModulus.infimum_refines_right
+#print axioms AbelFormalization.CharbonnelModulus.exists_common_refinement
+#print axioms AbelFormalization.CharbonnelModulus.parameterTail
+#print axioms AbelFormalization.CharbonnelModulus.ApproximatesFromBelow.mono_modulus
+#print axioms AbelFormalization.CharbonnelModulus.ApproximatesFromAboveOnBoundedSets.mono_modulus
+#print axioms AbelFormalization.CharbonnelModulus.IsTwoSidedApproximation.mono_modulus
+#print axioms AbelFormalization.CharbonnelModulus.exists_common_modulus_for_two_approximations
+#print axioms AbelFormalization.CharbonnelModulus.ApproximatesFromBelow.union
+#print axioms AbelFormalization.CharbonnelModulus.ApproximatesFromAboveOnBoundedSets.union
+#print axioms AbelFormalization.CharbonnelModulus.IsTwoSidedApproximation.union
