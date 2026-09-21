@@ -71,6 +71,8 @@ jobs:
           lint: false
           use-mathlib-cache: true
           use-github-cache: false
+      - name: Check confined Lake launch before the full build
+        run: ./scripts/verify-comparator.sh --check-environment
       - name: Build all public modules
         run: |
           lake build

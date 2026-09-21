@@ -8,6 +8,10 @@ if [ "$(uname -s)" != Linux ]; then
   echo "error: Comparator verification requires Linux and Landrun; use the private GitHub workflow" >&2
   exit 1
 fi
+if [ "$#" -gt 1 ] || { [ "$#" -eq 1 ] && [ "$1" != --check-environment ]; }; then
+  echo "usage: $0 [--check-environment]" >&2
+  exit 2
+fi
 
 repository_root=$(cd "$(dirname "$0")/.." && pwd)
 cache_root=${PALOMAR_COMPARATOR_CACHE:-"$repository_root/.cache/palomar-comparator"}
@@ -21,7 +25,52 @@ lean4export_commit=cacf989bd75f608700820f6afc595f32e7a99a4d
 landrun_commit=811cfff51ceaf3d9843708aa6d22e9b84ccac8b4
 nanoda_commit=68d5ca9db226849b41a6fff59d796ff19d0a8840
 
-for required_command in cargo git go lake python3 systemd-run; do
+for required_command in lake systemd-run; do
+  if ! command -v "$required_command" >/dev/null 2>&1; then
+    echo "error: $required_command is required to run Comparator" >&2
+    exit 1
+  fi
+done
+
+# systemd-run resolves its command before applying the worker's environment.
+# Resolve Lake before sudo replaces PATH with its secure_path.
+lake_command=$(command -v lake)
+cd "$repository_root"
+# The current Comparator requires AF_UNIX confinement in addition to Landrun.
+# Hosted runners commonly lack a usable user manager. Like Palomar's verifier,
+# try the system manager first, running the worker as the current unprivileged
+# user, then the user manager. Never continue without the confinement probe.
+confinement=(--quiet --pipe --wait --collect
+  --property=RestrictAddressFamilies=~AF_UNIX
+  --property=NoNewPrivileges=yes
+  --property=PrivateNetwork=yes
+  --property=RuntimeMaxSec=19800s
+  --working-directory="$repository_root")
+manager=()
+if command -v sudo >/dev/null 2>&1 && \
+    sudo -n systemd-run "${confinement[@]}" --uid="$(id -u)" --gid="$(id -g)" -- true; then
+  manager=(sudo -n systemd-run --uid="$(id -u)" --gid="$(id -g)")
+elif systemd-run --user "${confinement[@]}" -- true; then
+  manager=(systemd-run --user)
+else
+  echo "error: no systemd manager can apply the required verification confinement" >&2
+  exit 1
+fi
+worker_environment=(
+  --setenv="PATH=$PATH"
+  --setenv="HOME=$HOME"
+  --setenv="ELAN_HOME=${ELAN_HOME:-$HOME/.elan}"
+  --setenv="PALOMAR_LANDRUN_BIN=$bin_dir/landrun"
+  --setenv="COMPARATOR_LEAN4EXPORT=$lean4export_dir/.lake/build/bin/lean4export"
+  --setenv="COMPARATOR_NANODA=$nanoda_dir/target/release/nanoda_bin"
+  --setenv="COMPARATOR_LANDRUN=$repository_root/scripts/landrun-wrapper.sh")
+"${manager[@]}" "${confinement[@]}" "${worker_environment[@]}" -- "$lake_command" --version
+if [ "${1:-}" = --check-environment ]; then
+  echo "PASS: confined Lake launch with the project toolchain"
+  exit 0
+fi
+
+for required_command in cargo git go python3; do
   if ! command -v "$required_command" >/dev/null 2>&1; then
     echo "error: $required_command is required to run Comparator" >&2
     exit 1
@@ -92,31 +141,5 @@ CGO_ENABLED=0 GOBIN="$bin_dir" go install "github.com/zouuup/landrun/cmd/landrun
 (cd "$nanoda_dir" && cargo build --release --locked)
 
 cd "$repository_root"
-# The current Comparator requires AF_UNIX confinement in addition to Landrun.
-# Hosted runners commonly lack a usable user manager. Like Palomar's verifier,
-# try the system manager first, running the worker as the current unprivileged
-# user, then the user manager. Never continue without the confinement probe.
-confinement=(--quiet --pipe --wait --collect
-  --property=RestrictAddressFamilies=~AF_UNIX
-  --property=NoNewPrivileges=yes
-  --property=PrivateNetwork=yes
-  --property=RuntimeMaxSec=19800s
-  --working-directory="$repository_root")
-manager=()
-if command -v sudo >/dev/null 2>&1 && \
-    sudo -n systemd-run "${confinement[@]}" --uid="$(id -u)" --gid="$(id -g)" -- true; then
-  manager=(sudo -n systemd-run --uid="$(id -u)" --gid="$(id -g)")
-elif systemd-run --user "${confinement[@]}" -- true; then
-  manager=(systemd-run --user)
-else
-  echo "error: no systemd manager can apply the required verification confinement" >&2
-  exit 1
-fi
-"${manager[@]}" "${confinement[@]}" \
-  --setenv="PATH=$PATH" \
-  --setenv="ELAN_HOME=${ELAN_HOME:-$HOME/.elan}" \
-  --setenv="PALOMAR_LANDRUN_BIN=$bin_dir/landrun" \
-  --setenv="COMPARATOR_LEAN4EXPORT=$lean4export_dir/.lake/build/bin/lean4export" \
-  --setenv="COMPARATOR_NANODA=$nanoda_dir/target/release/nanoda_bin" \
-  --setenv="COMPARATOR_LANDRUN=$repository_root/scripts/landrun-wrapper.sh" \
-  -- lake env "$comparator_dir/.lake/build/bin/comparator" comparator.json
+"${manager[@]}" "${confinement[@]}" "${worker_environment[@]}" \
+  -- "$lake_command" env "$comparator_dir/.lake/build/bin/comparator" comparator.json
