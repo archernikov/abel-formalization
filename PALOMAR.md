@@ -99,12 +99,25 @@ count, as is the unbuilt historical `Scratch/` archive. `Solution.lean` imports
 the substantive proofs, and Comparator is configured to permit only `propext`,
 `Quot.sound`, and `Classical.choice`.
 
-Before submission, the exact final commit must pass its local build, audit, and
-Comparator checks and be published at a stable public Git commit. Palomar's
-official public mechanical preflight, editorial review, and registration are
-later gates. None of those registry gates has yet been passed. The private
-checks below include successful independent NanoDa replay, but do not replace
-the official public preflight.
+The repository was made public with the author's approval on 21 September
+2026. The exact submitted commit is
+[`56de27174c84749290f007c8bb1c43840eded8c1`](https://github.com/archernikov/abel-formalization/tree/56de27174c84749290f007c8bb1c43840eded8c1).
+Its [official full preflight](https://github.com/archernikov/abel-formalization/actions/runs/35640826200)
+completed successfully at **19:18:28 UTC**, using the pinned PalomarSubmission
+workflow and `palomar-standard-v1` profile. The mechanical report records
+`status: pass`, no errors or warnings, high-trust Challenge provenance,
+successful Comparator comparison, and acceptance by both NanoDa and Lean's
+default kernel. The downloaded report's SHA-256 is
+`9a01176d999442ad69893f807e94744ec1d6d0f49e7631cc6cc8cc708a57a5e1`.
+
+Palomar received submission **`zaqsxewg529p`** at **19:21:44 UTC** on the same
+date, with `comparator.json` selected at the repository root and the
+responsible-author/maintainer relationship declared. Its
+[registry verification run](https://github.com/PalomarRegistry/PalomarSubmission/actions/runs/35644330031)
+was queued at intake. Registry verification and editorial review remain
+pending, and registration has not been authorized. This submission receipt
+does not claim registration or an editorial outcome. Later documentation
+commits do not change the pinned source under review.
 
 ## Verified private snapshot
 
@@ -128,8 +141,8 @@ The recorded checks passed:
   the solution, and Comparator concluded `Your solution is okay!`.
 
 This is a verification record for the specified commit and checking workflow.
-It is not a Palomar editorial decision or registration. The eventual public
-submission must still pass official preflight at its own exact final commit.
+It is not a Palomar editorial decision or registration. The separate official
+preflight result for the submitted commit is recorded above.
 
 ## Reproduce the checks
 
@@ -155,7 +168,8 @@ The **Verify formalization** GitHub Actions workflow is started manually and
 works with this repository's private visibility. It checks the metadata using
 PalomarSubmission at `3561d237dcc4b28482558ad28a64d767d7cc8615`, detects the root
 license, builds the project, runs the three audits, and runs the pinned
-Comparator with NanoDa. Its logs stay with the private repository.
+Comparator with NanoDa. Its logs were private during preparation and became
+public when the repository was published.
 
 The standalone Comparator script is `scripts/verify-comparator.sh`. It requires
 Linux with Landrun/systemd confinement, Git, Go, Rust/Cargo, Python, and Lean.
@@ -181,13 +195,13 @@ CI. Without that option, the script explicitly reports that detection is
 omitted. This helper checks the package structure and direct imports; the
 official verifier separately authenticates the entire Challenge import closure.
 
-## Later publication and intake
+## Submission and registration procedure
 
 The separate **Official Palomar preflight (public repository only)** workflow
 is manual and skips its verification job while the repository is private.
-After an explicit publication decision, run it with `mode: full` for the exact
-final commit and require a passing mechanical report. Review current Palomar
-policy and tool pins again at that time.
+For a future submission, run it with `mode: full` for the exact proposed commit
+and require a passing mechanical report. Review current Palomar policy and
+tool pins again at that time.
 
 The ordinary submission layout uses repository `archernikov/abel-formalization`,
 the full final commit SHA, Comparator path `comparator.json`, and metadata path

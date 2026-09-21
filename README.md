@@ -12,8 +12,12 @@ agent-led audits are described in [formalization.yaml](formalization.yaml).
 
 The repository contains a [Palomar submission package](PALOMAR.md), including
 an independent [Challenge](Challenge.lean) and the corresponding
-[Solution](Solution.lean). Preparation does not constitute Palomar verification
-or registration. The repository is being kept private during preparation.
+[Solution](Solution.lean). The repository is public. On 21 September 2026,
+commit [`56de271`](https://github.com/archernikov/abel-formalization/tree/56de27174c84749290f007c8bb1c43840eded8c1)
+passed the [official full preflight](https://github.com/archernikov/abel-formalization/actions/runs/35640826200)
+and was submitted to Palomar as **`zaqsxewg529p`**. The
+[registry verification run](https://github.com/PalomarRegistry/PalomarSubmission/actions/runs/35644330031)
+and subsequent review are pending; the result is not yet registered.
 
 The prepared theorem package has passed the full Lean build, the three audits,
 and Comparator replay in both NanoDa and Lean's default kernel at the
