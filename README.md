@@ -1,4 +1,19 @@
-# Abel functions: Lean formalization
+# A transexponential o-minimal structure
+
+The real field expanded by the function $x\mapsto A(1+x^2)$, where $A$ is a
+normalized analytic Abel function for $e^x-1$, is an o-minimal structure that
+defines a function that grows faster than any finite iterate of the exponential
+function.
+
+**Author and responsible maintainer:** Artem Chernikov. **License:** Apache-2.0.
+The author obtained this original result using ChatGPT 6 Astra; a paper with a
+careful human presentation is in preparation. The Lean development and its
+agent-led audits are described in [formalization.yaml](formalization.yaml).
+
+The repository contains a [Palomar submission package](PALOMAR.md), including
+an independent [Challenge](Challenge.lean) and the corresponding
+[Solution](Solution.lean). Preparation does not constitute Palomar verification
+or registration. The repository is being kept private during preparation.
 
 **This project proves the paper's main theorem.** The theorem
 `AbelFormalization.mainTheorem : MainTheorem` establishes the o-minimality,

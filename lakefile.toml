@@ -1,6 +1,6 @@
 name = "abelFormalization"
 version = "0.1.0"
-defaultTargets = ["AbelFormalization"]
+defaultTargets = ["AbelFormalization", "Challenge", "Solution"]
 
 [[require]]
 name = "mathlib"
@@ -9,3 +9,11 @@ rev = "e37d88a26f3791ed5a93daa1f949af1021b8d103"
 
 [[lean_lib]]
 name = "AbelFormalization"
+
+[[lean_lib]]
+name = "Challenge"
+roots = ["Challenge"]
+
+[[lean_lib]]
+name = "Solution"
+roots = ["Solution"]

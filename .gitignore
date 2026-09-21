@@ -1,7 +1,10 @@
 .lake/
+.cache/
 /tmp/
 .DS_Store
 *.olean
 *.ilean
 .env
 .env.*
+__pycache__/
+*.pyc

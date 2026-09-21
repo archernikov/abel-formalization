@@ -1,0 +1,196 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/mathlib-initiative/formalization.yaml/main/schema/formalization.schema.json
+version: "v0.4"
+
+project:
+  name: "A transexponential o-minimal structure"
+  description: 'The real field expanded by the function $x\mapsto A(1+x^2)$, where $A$ is a normalized analytic Abel function for $e^x-1$, is an o-minimal structure that defines a function that grows faster than any finite iterate of the exponential function.'
+  authors:
+    - "Artem Chernikov"
+  license: "Apache-2.0"
+  responsible_maintainers:
+    - "Artem Chernikov"
+
+classification:
+  arxiv: ["math.LO"]
+  msc2020: ["03C64"]
+
+sources:
+  - title: "A transexponential o-minimal structure"
+    authors:
+      - "Artem Chernikov"
+    type: "original-proof"
+    location: "This repository: Challenge.lean and Solution.lean"
+    relationship: "other"
+    note: >-
+      Artem Chernikov declares the recorded result and proof development to be
+      original work obtained with the assistance of ChatGPT 6 Astra. This is
+      the author's statement of origin and provenance, not an independently
+      verified novelty or priority determination. A paper giving a careful
+      human presentation is in preparation.
+    author_endorsement: "participated"
+  - title: "A transexponential o-minimal structure (maybe)"
+    authors:
+      - "Artem Chernikov"
+    id: "sha256:f71eff9a0f971a8b17ac33c956b34313625c4e986bb9f9dff269ff1b869029d2"
+    type: "other"
+    relationship: "other"
+    note: >-
+      Artem Chernikov's private working manuscript omin.tex, Version 29,
+      7 September 2026. It provided the conditional main-theorem statement and
+      proof architecture audited by this project, and it is not included in
+      the repository. The present Lean development also proves existence of
+      the required Abel function.
+    author_endorsement: "participated"
+  - title: "A theorem of the complement and some new o-minimal structures"
+    authors:
+      - "A. J. Wilkie"
+    id: "https://doi.org/10.1007/s000290050052"
+    type: "paper"
+    location: "Selecta Mathematica 5 (1999), 397-421"
+    relationship: "background"
+    note: >-
+      Background for the theorem-of-the-complement and weak-family arguments.
+      The required steps are proved in Lean rather than imported as axioms.
+  - title: "Finitude simple et structures o-minimales (Finiteness Property Implies o-Minimality)"
+    authors:
+      - "Jean-Marie Lion"
+    id: "https://www.jstor.org/stable/3648591"
+    type: "paper"
+    location: "The Journal of Symbolic Logic 67 (2002), no. 4, 1616-1622"
+    relationship: "background"
+    note: >-
+      Background for uniform fiber finiteness. The formalization proves the
+      relevant theorem chain internally and specializes it to the Abel family.
+  - title: "Fractional iteration of exponentially growing functions"
+    authors:
+      - "G. Szekeres"
+    id: "https://doi.org/10.1017/S1446788700026902"
+    type: "paper"
+    location: "Journal of the Australian Mathematical Society 2 (1962), no. 3, 301-320; Section 2, Lemma 1, p. 304"
+    relationship: "background"
+    note: >-
+      Background for existence and normalization of Abel functions. The Lean
+      proof instead constructs a positive analytic invariant density from a
+      normally convergent logarithmic-defect series, integrates it, and
+      normalizes its positive increment. It does not identify the density with
+      Szekeres's distinguished solution or prove his precise asymptotic.
+
+related_formalizations:
+  - id: "https://github.com/rwbarton/lean-omin/tree/fd733c6d95ef6f4743aae97de5e15df79877c00e"
+    relationship: "independent"
+    note: >-
+      Reid Barton's Lean 3 o-minimality infrastructure was audited for reuse.
+      No code from it is imported or ported here; it neither formalizes this
+      Abel-function result nor supplies the complement theorem needed for it.
+
+status:
+  scope: >-
+    The project proves both the universal conditional theorem
+    AbelFormalization.mainTheorem and the unconditional existence theorem
+    AbelFormalization.exists_abel_ominimal_expansion. For every total real
+    function A whose restriction to (0,infinity) is analytic with positive
+    derivative, is normalized by A(1)=0, and satisfies
+    A(exp(x)-1)=A(x)+1 for x>0, the expansion of the real ordered field by
+    C0(x)=A(1+x^2) is o-minimal. Definability is first-order definability with
+    arbitrary real parameters. The full real exponential graph and the graph
+    of the inverse of A restricted to positive inputs are definable. For every
+    fixed natural k, that inverse eventually strictly dominates the k-fold
+    iterate of the exponential. Lean represents A as a total function, but its
+    values outside the positive half-line are irrelevant and unconstrained.
+    The project also constructs an A satisfying the hypotheses. It does not
+    prove uniqueness, identification with a distinguished Szekeres solution,
+    or Szekeres's precise density asymptotic. The sorry counts cover the built
+    substantive development and exclude both the two deliberate statement
+    placeholders in Challenge.lean and the unbuilt historical Scratch/ archive.
+  sorry_count: 0
+  sorry_in_definitions: 0
+  axioms: ["propext", "Classical.choice", "Quot.sound"]
+
+automation:
+  methods:
+    - method: "manual"
+      models: []
+      framework: "n/a"
+      tool_setup: >-
+        Human authorship, mathematical direction, provenance decisions, and
+        responsibility for the submitted result.
+      cost:
+        wall_time: "not tracked"
+        spend_usd: "not tracked"
+        hardware: "local workstation"
+      prompting_notes: "n/a"
+    - method: "agent"
+      models: ["ChatGPT 6 Astra"]
+      framework: "ChatGPT"
+      tool_setup: "AI-assisted initial mathematical research"
+      cost:
+        wall_time: "not tracked"
+        spend_usd: "not tracked"
+        hardware: "provider-hosted model service"
+      prompting_notes: >-
+        The author reports that the original result was obtained through work
+        with ChatGPT 6 Astra; prompt counts and costs were not reconstructed.
+    - method: "agent"
+      models: ["gpt-6-astra", "gpt-5.6-sol"]
+      framework: "Codex"
+      tool_setup: >-
+        Multi-agent Lean proof development, compilation, statement comparison,
+        dependency analysis, and repository audits.
+      cost:
+        wall_time: "not tracked"
+        spend_usd: "not tracked"
+        hardware: "local workstation with provider-hosted model inference"
+      prompting_notes: >-
+        Agents were directed iteratively to implement and check the Lean
+        development. Exact prompt, token, and cost totals were not reconstructed.
+  spend_usd: "not tracked"
+  notes: >-
+    Artem Chernikov is the human author and responsible maintainer. Automated
+    systems made material contributions to the research, formalization, and
+    audits; they are credited here rather than in the human authorship fields.
+
+fidelity:
+  divergences: >-
+    The private draft's conditional main theorem and its four Abel hypotheses
+    are represented without a known statement mismatch. The formalization adds
+    an unconditional construction of a suitable Abel function. That construction
+    normalizes a positive analytic invariant density by its positive primitive
+    increment, rather than proving the precise Szekeres density asymptotic; it
+    therefore makes no uniqueness or distinguished-solution claim. Total values
+    of A outside (0,infinity) are arbitrary and play no role.
+
+review:
+  status: "agent-reviewed"
+  reviewers:
+    - "Codex gpt-6-astra agents"
+    - "Codex gpt-5.6-sol agents"
+  notes: >-
+    Agent-led statement-correspondence, dependency, reuse, compilation, and
+    axiom audits are recorded in the repository. No completed independent
+    human-expert review has been reported. This does not assert a Palomar
+    editorial review or Palomar registration.
+
+alignment:
+  namespace: "AbelFormalization"
+  statements:
+    - source: "Private manuscript Version 29, conditional main theorem, lines 131-141"
+      lean: "AbelFormalization.mainTheorem"
+      module: "AbelFormalization.WilkieSection4LiteralZeroInduction"
+      status: "proved"
+      note: >-
+        Proves the o-minimality, full-exponential definability,
+        positive-input inverse definability, and fixed-iterate growth clauses
+        from exactly the four IsAbel hypotheses.
+    - source: "Private manuscript Version 29, existence discussion, lines 72-107"
+      lean: "AbelFormalization.exists_abel_ominimal_expansion"
+      module: "AbelFormalization.AbelExistentialMainTheorem"
+      status: "proved"
+      note: >-
+        Constructs a normalized analytic Abel function internally and applies
+        the universal theorem. The construction proves the required existence
+        statement without the stronger Szekeres asymptotic or uniqueness claim.
+
+acknowledgements: >-
+  Built with Lean and Mathlib. The mathematical background sources are recorded
+  above. ChatGPT 6 Astra and Codex agents using gpt-6-astra and gpt-5.6-sol made
+  material automated contributions as described in the automation record.
