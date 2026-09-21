@@ -10,7 +10,7 @@ permissions:
 
 jobs:
   preflight:
-    if: ${{ github.event.repository.private == false }}
+    if: ${{ github.event.repository.private == false && github.event.repository.visibility == 'public' }}
     uses: PalomarRegistry/PalomarSubmission/.github/workflows/submission.yml@3561d237dcc4b28482558ad28a64d767d7cc8615
     with:
       repository: ${{ github.repository }}
