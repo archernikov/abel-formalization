@@ -6,18 +6,22 @@ defines a function that grows faster than any finite iterate of the exponential
 function.
 
 **Author and responsible maintainer:** Artem Chernikov. **License:** Apache-2.0.
-The author obtained this original result using ChatGPT 6 Astra; a paper with a
-careful human presentation is in preparation. The Lean development and its
-agent-led audits are described in [formalization.yaml](formalization.yaml).
+This project formalizes Artem Chernikov's private manuscript, which contains
+his new original proof of the theorem obtained using GPT6 Astra. A paper with a
+careful human presentation is in preparation. The manuscript is the source of
+the theorem and proof architecture; the Lean development and its agent-led
+audits are described in [formalization.yaml](formalization.yaml).
 
 The repository contains a [Palomar submission package](PALOMAR.md), including
 an independent [Challenge](Challenge.lean) and the corresponding
 [Solution](Solution.lean). The repository is public. On 21 September 2026,
 commit [`56de271`](https://github.com/archernikov/abel-formalization/tree/56de27174c84749290f007c8bb1c43840eded8c1)
 passed the [official full preflight](https://github.com/archernikov/abel-formalization/actions/runs/35640826200)
-and was submitted to Palomar as **`zaqsxewg529p`**. The
+and was submitted to Palomar as **`zaqsxewg529p`**. Its
 [registry verification run](https://github.com/PalomarRegistry/PalomarSubmission/actions/runs/35644330031)
-and subsequent review are pending; the result is not yet registered.
+also passed. The current metadata records the manuscript as the source being
+formalized, and an updated submission is being prepared. The result is not
+yet registered.
 
 The prepared theorem package has passed the full Lean build, the three audits,
 and Comparator replay in both NanoDa and Lean's default kernel at the
@@ -29,8 +33,10 @@ definability, and transexponential conclusions from the stated Abel hypotheses,
 without adding an axiom.
 
 The project also proves `AbelFormalization.exists_isAbel : ∃ A, IsAbel A`.
-The construction supplies an analytic positive invariant density and integrates
-and normalizes it to satisfy exactly the four Abel hypotheses.
+This construction was developed for the Lean project in addition to the
+manuscript's conditional proof and existence discussion. It supplies an
+analytic positive invariant density and integrates and normalizes it to
+satisfy exactly the four Abel hypotheses.
 `exists_abel_ominimal_expansion` combines this witness with the main theorem.
 See [the existence construction](ABEL_EXISTENCE_CONSTRUCTION.md) and
 [the statement correspondence audit](MAIN_THEOREM_CORRESPONDENCE_AUDIT.md).

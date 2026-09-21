@@ -15,31 +15,24 @@ classification:
   msc2020: ["03C64"]
 
 sources:
-  - title: "A transexponential o-minimal structure"
-    authors:
-      - "Artem Chernikov"
-    type: "original-proof"
-    location: "This repository: Challenge.lean and Solution.lean"
-    relationship: "other"
-    note: >-
-      Artem Chernikov declares the recorded result and proof development to be
-      original work obtained with the assistance of ChatGPT 6 Astra. This is
-      the author's statement of origin and provenance, not an independently
-      verified novelty or priority determination. A paper giving a careful
-      human presentation is in preparation.
-    author_endorsement: "participated"
   - title: "A transexponential o-minimal structure (maybe)"
     authors:
       - "Artem Chernikov"
     id: "sha256:f71eff9a0f971a8b17ac33c956b34313625c4e986bb9f9dff269ff1b869029d2"
     type: "other"
-    relationship: "other"
+    location: "Private manuscript omin.tex, Version 29, 7 September 2026; main theorem at lines 131-141"
+    relationship: "formalizes"
     note: >-
       Artem Chernikov's private working manuscript omin.tex, Version 29,
-      7 September 2026. It provided the conditional main-theorem statement and
-      proof architecture audited by this project, and it is not included in
-      the repository. The present Lean development also proves existence of
-      the required Abel function.
+      7 September 2026, is the substantive mathematical source formalized by
+      this project. The author states that the manuscript contains his new
+      original proof of the theorem, obtained using GPT6 Astra. It supplied
+      the conditional main-theorem statement and proof architecture; the
+      formalization does not claim to be their first presentation. The
+      manuscript is private and is not included in the repository. A paper
+      giving a careful human presentation is in preparation. The additional
+      invariant-density construction developed for the Lean formalization is
+      described separately under fidelity and alignment below.
     author_endorsement: "participated"
   - title: "A theorem of the complement and some new o-minimal structures"
     authors:
@@ -128,8 +121,9 @@ automation:
         spend_usd: "not tracked"
         hardware: "provider-hosted model service"
       prompting_notes: >-
-        The author reports that the original result was obtained through work
-        with ChatGPT 6 Astra; prompt counts and costs were not reconstructed.
+        The author reports that the new original proof in his private source
+        manuscript was obtained using GPT6 Astra; prompt counts and costs were
+        not reconstructed. The Lean project formalizes that manuscript.
     - method: "agent"
       models: ["gpt-6-astra", "gpt-5.6-sol"]
       framework: "Codex"
@@ -151,10 +145,14 @@ automation:
 
 fidelity:
   divergences: >-
-    The private draft's conditional main theorem and its four Abel hypotheses
-    are represented without a known statement mismatch. The formalization adds
-    an unconditional construction of a suitable Abel function. That construction
-    normalizes a positive analytic invariant density by its positive primitive
+    The private manuscript is the source of the conditional main theorem and
+    its proof architecture; its four Abel hypotheses are represented without a
+    known statement mismatch. As an additional development, the Lean project
+    supplies a construction of a suitable Abel function and combines it with
+    the conditional theorem to obtain exists_abel_ominimal_expansion. The
+    existence claim itself is discussed in the manuscript. The invariant-density
+    construction developed for this formalization normalizes a positive analytic
+    invariant density by its positive primitive
     increment, rather than proving the precise Szekeres density asymptotic; it
     therefore makes no uniqueness or distinguished-solution claim. Total values
     of A outside (0,infinity) are arbitrary and play no role.
@@ -167,8 +165,8 @@ review:
   notes: >-
     Agent-led statement-correspondence, dependency, reuse, compilation, and
     axiom audits are recorded in the repository. No completed independent
-    human-expert review has been reported. This does not assert a Palomar
-    editorial review or Palomar registration.
+    human-expert review has been reported. This section records the project's
+    own audits and does not assert Palomar registration.
 
 alignment:
   namespace: "AbelFormalization"
@@ -186,9 +184,12 @@ alignment:
       module: "AbelFormalization.AbelExistentialMainTheorem"
       status: "proved"
       note: >-
-        Constructs a normalized analytic Abel function internally and applies
-        the universal theorem. The construction proves the required existence
-        statement without the stronger Szekeres asymptotic or uniqueness claim.
+        Develops an invariant-density construction within the Lean project to
+        prove the existence discussed in the manuscript, then applies the
+        universal theorem. This additional construction and its unconditional
+        Lean corollary are distinguished from the manuscript's conditional
+        theorem and proof architecture. The construction does not establish
+        the stronger Szekeres asymptotic or a uniqueness claim.
 
 acknowledgements: >-
   Built with Lean and Mathlib. The mathematical background sources are recorded

@@ -47,17 +47,31 @@ the construction is documented in
 
 ## Origin and sources
 
-Artem Chernikov declares the result and proof development to be original work
-obtained with the assistance of ChatGPT 6 Astra. This records the author's
-account of origin and the production process; it is not an independent proof
-of novelty or priority. A paper with a careful human presentation is in
-preparation.
-
-An earlier private source is Artem Chernikov's working manuscript
+This project formalizes Artem Chernikov's private working manuscript
 *A transexponential o-minimal structure (maybe)*, `omin.tex`, Version 29,
 7 September 2026, SHA-256
-`f71eff9a0f971a8b17ac33c956b34313625c4e986bb9f9dff269ff1b869029d2`. Its
-file is not included in this repository.
+`f71eff9a0f971a8b17ac33c956b34313625c4e986bb9f9dff269ff1b869029d2`.
+The author states that this manuscript contains his new original proof of the
+theorem obtained using GPT6 Astra. It supplied the conditional theorem and
+proof architecture formalized here. A paper with a careful human presentation
+is in preparation; the private manuscript file is not included in this
+repository.
+
+The metadata therefore identifies the private manuscript under `type: other`
+and uses `relationship: formalizes`.
+Palomar derives **source-based** provenance from that relationship: it records
+where the theorem and proof were presented before formalization, while the
+author's account of their mathematical originality is retained in the source
+note. The project does not claim that the Lean development first presented
+the manuscript's theorem or proof architecture.
+
+The invariant-density construction of an Abel function was developed as an
+additional part of the Lean project. It proves the existence discussed in the
+manuscript and yields the unconditional Lean theorem
+`exists_abel_ominimal_expansion` by applying the conditional theorem. This
+construction is separately documented in
+[ABEL_EXISTENCE_CONSTRUCTION.md](ABEL_EXISTENCE_CONSTRUCTION.md); it does not
+establish Szekeres's stronger asymptotic or uniqueness.
 
 The development uses the following mathematical background:
 
@@ -87,8 +101,8 @@ totals were not reconstructed.
 
 The repository has received agent-led statement, dependency, reuse, compiler,
 and axiom audits. No completed independent human-expert review has been
-reported, and no Palomar editorial review or registration is claimed. The
-project is licensed under Apache-2.0.
+reported. This account records the project's own audits and does not claim
+Palomar registration. The project is licensed under Apache-2.0.
 
 ## Submission state
 
@@ -114,10 +128,11 @@ Palomar received submission **`zaqsxewg529p`** at **19:21:44 UTC** on the same
 date, with `comparator.json` selected at the repository root and the
 responsible-author/maintainer relationship declared. Its
 [registry verification run](https://github.com/PalomarRegistry/PalomarSubmission/actions/runs/35644330031)
-was queued at intake. Registry verification and editorial review remain
-pending, and registration has not been authorized. This submission receipt
-does not claim registration or an editorial outcome. Later documentation
-commits do not change the pinned source under review.
+passed. Registration has not been authorized. The current metadata records the
+manuscript as the substantive source being formalized, and an updated
+submission is being prepared. This historical receipt does not claim
+registration or publish an editorial outcome. Later documentation and
+metadata commits do not change the source pinned by that earlier submission.
 
 ## Verified private snapshot
 
