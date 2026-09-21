@@ -15,6 +15,10 @@ an independent [Challenge](Challenge.lean) and the corresponding
 [Solution](Solution.lean). Preparation does not constitute Palomar verification
 or registration. The repository is being kept private during preparation.
 
+The prepared theorem package has passed the full Lean build, the three audits,
+and Comparator replay in both NanoDa and Lean's default kernel at the
+[recorded private verification snapshot](PALOMAR.md#verified-private-snapshot).
+
 **This project proves the paper's main theorem.** The theorem
 `AbelFormalization.mainTheorem : MainTheorem` establishes the o-minimality,
 definability, and transexponential conclusions from the stated Abel hypotheses,

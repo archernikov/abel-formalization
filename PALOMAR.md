@@ -101,9 +101,35 @@ the substantive proofs, and Comparator is configured to permit only `propext`,
 
 Before submission, the exact final commit must pass its local build, audit, and
 Comparator checks and be published at a stable public Git commit. Palomar's
-public mechanical workflow, independent NanoDa replay, editorial review, and
-registration are later gates. None of those later gates has yet been passed by
-this private pre-submission snapshot.
+official public mechanical preflight, editorial review, and registration are
+later gates. None of those registry gates has yet been passed. The private
+checks below include successful independent NanoDa replay, but do not replace
+the official public preflight.
+
+## Verified private snapshot
+
+The **Verify formalization** workflow
+[passed in run 35550508636](https://github.com/archernikov/abel-formalization/actions/runs/35550508636)
+for commit
+[`d98a773f50fecf6275f08276fe199f77ca53f832`](https://github.com/archernikov/abel-formalization/tree/d98a773f50fecf6275f08276fe199f77ca53f832),
+finishing on **21 September 2026 at 02:08:45 UTC**. The repository was private.
+The recorded checks passed:
+
+- Palomar's pinned metadata/configuration validator and Apache-2.0 license
+  detection.
+- `lake build`, covering the full proof library, Challenge, and Solution.
+- `Audit.lean`: all **20,726 project declarations**, including **14,823 theorem
+  declarations** (generated helpers included), use only `propext`,
+  `Classical.choice`, and `Quot.sound`.
+- `AbelExistenceAudit.lean` and `StatementCorrespondenceAudit.lean`, including
+  the expanded existence hypotheses and expanded draft theorem statement.
+- Comparator comparison of both declarations listed above against Challenge.
+- Independent NanoDa replay and replay in Lean's default kernel. Both accepted
+  the solution, and Comparator concluded `Your solution is okay!`.
+
+This is a verification record for the specified commit and checking workflow.
+It is not a Palomar editorial decision or registration. The eventual public
+submission must still pass official preflight at its own exact final commit.
 
 ## Reproduce the checks
 
@@ -137,6 +163,10 @@ Its tool revisions match the recorded Palomar verification profile, with
 `lean4export` selected for Lean `v4.34.0-rc2`. It downloads tools below ignored
 `.cache/`; the proof build remains below ignored `.lake/`. A private CI pass is
 useful evidence, but does not replace the official public preflight.
+The workflow frees unused hosted-runner SDK storage before installing Lean and
+tests the confined Lake launch before the full build. The latter check can also
+be run on a configured Linux host with
+`./scripts/verify-comparator.sh --check-environment`.
 
 For local metadata/configuration checks, supply an independent checkout of the
 pinned PalomarSubmission commit and install its Python requirements:
