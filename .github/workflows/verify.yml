@@ -40,6 +40,29 @@ jobs:
         run: |
           python -m pip install --disable-pip-version-check --require-hashes --no-deps -r .lake/palomar-pipeline/requirements.txt
           python scripts/check-palomar-package.py --pipeline .lake/palomar-pipeline --licensee "$(command -v bundle)"
+      # Match the pinned Palomar workflow's cleanup of unused hosted-runner SDKs.
+      # Preserve the language tool cache and swap used by the proof build.
+      - name: Free disk space for Lean and Mathlib
+        uses: jlumbroso/free-disk-space@54081f138730dfa15788a46383842cd2f914a1be
+        with:
+          tool-cache: false
+          android: true
+          dotnet: true
+          haskell: true
+          large-packages: false
+          docker-images: true
+          swap-storage: false
+      - name: Check available build storage
+        run: |
+          df -h .
+          free -h
+          python - <<'PY'
+          import shutil
+          free_bytes = shutil.disk_usage(".").free
+          minimum_bytes = 20 * 1024**3
+          if free_bytes < minimum_bytes:
+              raise SystemExit(f"Need at least 20 GiB free before installing Lean; have {free_bytes / 1024**3:.1f} GiB")
+          PY
       - uses: leanprover/lean-action@38fbc41a8c28c4cbaec22d7f7de508ec2e7c0dd9
         with:
           auto-config: false
@@ -48,10 +71,14 @@ jobs:
           lint: false
           use-mathlib-cache: true
           use-github-cache: false
-      - name: Build all public modules and audit the proof axioms
+      - name: Build all public modules
         run: |
           lake build
-          lake env lean Audit.lean
+          df -h .
+      - name: Audit every project declaration
+        run: lake env lean Audit.lean
+      - name: Audit existence and statement correspondence
+        run: |
           lake env lean AbelExistenceAudit.lean
           lake env lean StatementCorrespondenceAudit.lean
       - uses: actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e
