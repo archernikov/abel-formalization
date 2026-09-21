@@ -1,0 +1,21 @@
+name: Official Palomar preflight (public repository only)
+
+# Advisory verification only. This neither submits nor registers a result.
+# The job is deliberately skipped while the repository remains private.
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  preflight:
+    if: ${{ github.event.repository.private == false }}
+    uses: PalomarRegistry/PalomarSubmission/.github/workflows/submission.yml@3561d237dcc4b28482558ad28a64d767d7cc8615
+    with:
+      repository: ${{ github.repository }}
+      commit: ${{ github.sha }}
+      pipeline_commit: 3561d237dcc4b28482558ad28a64d767d7cc8615
+      request_id: preflight001
+      mode: full
+      options: '{"comparator_config_path":"comparator.json","authorization_relationship":"I am a responsible author or maintainer"}'

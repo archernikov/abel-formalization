@@ -1,0 +1,62 @@
+name: Verify formalization
+
+# Runs in this repository and works while it is private. No registry API is called.
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: verify-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 350
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          persist-credentials: false
+      - name: Fetch pinned Palomar metadata validator
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          repository: PalomarRegistry/PalomarSubmission
+          ref: 3561d237dcc4b28482558ad28a64d767d7cc8615
+          path: .lake/palomar-pipeline
+          persist-credentials: false
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97
+        with:
+          python-version: "3.11.10"
+      - uses: ruby/setup-ruby@95ef2b042f9d7a56d8268cba8559e2842e2ad01b
+        with:
+          ruby-version: "3.3.12"
+          bundler-cache: true
+          working-directory: .lake/palomar-pipeline
+      - name: Validate metadata, license, and submission files
+        env:
+          BUNDLE_GEMFILE: ${{ github.workspace }}/.lake/palomar-pipeline/Gemfile
+        run: |
+          python -m pip install --disable-pip-version-check --require-hashes --no-deps -r .lake/palomar-pipeline/requirements.txt
+          python scripts/check-palomar-package.py --pipeline .lake/palomar-pipeline --licensee "$(command -v bundle)"
+      - uses: leanprover/lean-action@38fbc41a8c28c4cbaec22d7f7de508ec2e7c0dd9
+        with:
+          auto-config: false
+          build: false
+          test: false
+          lint: false
+          use-mathlib-cache: true
+          use-github-cache: false
+      - name: Build all public modules and audit the proof axioms
+        run: |
+          lake build
+          lake env lean Audit.lean
+          lake env lean AbelExistenceAudit.lean
+          lake env lean StatementCorrespondenceAudit.lean
+      - uses: actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e
+        with:
+          go-version: "1.24.0"
+          cache: false
+      - name: Compare statements and replay proofs in Lean and NanoDa
+        run: ./scripts/verify-comparator.sh
