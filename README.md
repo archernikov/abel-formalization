@@ -15,13 +15,13 @@ audits are described in [formalization.yaml](formalization.yaml).
 The repository contains a [Palomar submission package](PALOMAR.md), including
 an independent [Challenge](Challenge.lean) and the corresponding
 [Solution](Solution.lean). The repository is public. On 21 September 2026,
-commit [`56de271`](https://github.com/archernikov/abel-formalization/tree/56de27174c84749290f007c8bb1c43840eded8c1)
-passed the [official full preflight](https://github.com/archernikov/abel-formalization/actions/runs/35640826200)
-and was submitted to Palomar as **`zaqsxewg529p`**. Its
-[registry verification run](https://github.com/PalomarRegistry/PalomarSubmission/actions/runs/35644330031)
-also passed. The current metadata records the manuscript as the source being
-formalized, and an updated submission is being prepared. The result is not
-yet registered.
+commit [`acf1a5a`](https://github.com/archernikov/abel-formalization/tree/acf1a5a138aa966e1380e4af3100e6c286d00fe6)
+passed the [official full preflight](https://github.com/archernikov/abel-formalization/actions/runs/35649982169)
+with source-based provenance and was submitted to Palomar as
+**`3scl7d17niez`**. The
+[registry verification run](https://github.com/PalomarRegistry/PalomarSubmission/actions/runs/35653060781)
+and subsequent review are pending. The result is not yet registered; this
+receipt does not change the exact source commit under review.
 
 The prepared theorem package has passed the full Lean build, the three audits,
 and Comparator replay in both NanoDa and Lean's default kernel at the

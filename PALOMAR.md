@@ -113,8 +113,29 @@ count, as is the unbuilt historical `Scratch/` archive. `Solution.lean` imports
 the substantive proofs, and Comparator is configured to permit only `propext`,
 `Quot.sound`, and `Classical.choice`.
 
+### Current submission
+
+The current submission is **`3scl7d17niez`**, received on **21 September 2026
+at 20:45:26 UTC**, for exact commit
+[`acf1a5a138aa966e1380e4af3100e6c286d00fe6`](https://github.com/archernikov/abel-formalization/tree/acf1a5a138aa966e1380e4af3100e6c286d00fe6).
+It uses root `comparator.json` and the responsible-author/maintainer
+declaration. Its
+[registry verification run](https://github.com/PalomarRegistry/PalomarSubmission/actions/runs/35653060781)
+is in progress; subsequent review and registration remain pending.
+
+The [official full preflight](https://github.com/archernikov/abel-formalization/actions/runs/35649982169)
+passed for that exact commit before intake. Its report records `status: pass`,
+no errors or warnings, acceptance by Comparator, NanoDa, and Lean's default
+kernel, high-trust Challenge provenance, and **source-based** mathematical
+provenance. The primary source is the private manuscript with
+`relationship: formalizes`, including the author's account of its new
+original proof obtained using GPT6 Astra. The report SHA-256 is
+`4331fae132afb44ca3a09fcc2fea5f4b621be73b19ef1b8d0052ecc083357486`.
+
+### Earlier submission
+
 The repository was made public with the author's approval on 21 September
-2026. The exact submitted commit is
+2026. The first submitted commit was
 [`56de27174c84749290f007c8bb1c43840eded8c1`](https://github.com/archernikov/abel-formalization/tree/56de27174c84749290f007c8bb1c43840eded8c1).
 Its [official full preflight](https://github.com/archernikov/abel-formalization/actions/runs/35640826200)
 completed successfully at **19:18:28 UTC**, using the pinned PalomarSubmission
@@ -128,11 +149,10 @@ Palomar received submission **`zaqsxewg529p`** at **19:21:44 UTC** on the same
 date, with `comparator.json` selected at the repository root and the
 responsible-author/maintainer relationship declared. Its
 [registry verification run](https://github.com/PalomarRegistry/PalomarSubmission/actions/runs/35644330031)
-passed. Registration has not been authorized. The current metadata records the
-manuscript as the substantive source being formalized, and an updated
-submission is being prepared. This historical receipt does not claim
-registration or publish an editorial outcome. Later documentation and
-metadata commits do not change the source pinned by that earlier submission.
+passed. That submission was not registered. The current submission is recorded
+above. This historical receipt does not publish an editorial outcome. Later
+documentation and metadata commits do not change the source pinned by either
+submission.
 
 ## Verified private snapshot
 
